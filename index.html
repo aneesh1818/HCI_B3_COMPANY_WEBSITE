@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oracle Corporation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li {
+            position: relative;
+        }
+        nav ul li a {
+            display: block;
+            padding: 10px 20px;
+            color: #fff;
+            text-decoration: none;
+        }
+        nav ul li:hover {
+            background-color: #555;
+        }
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #444;
+            padding: 0;
+            list-style: none;
+        }
+        nav ul li:hover ul {
+            display: block;
+        }
+        nav ul li ul li {
+            width: 200px;
+        }
+        nav ul li ul li a {
+            padding: 10px;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            display: none;
+        }
+        section.active {
+            display: block;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('main section');
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+            var selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.classList.add('active');
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="https://it-dialog.com.ua/assets/images/vendors/oracle-logo-01.png" alt="Oracle Corporation Logo" style="width: 150px;"/>
+        <h1>Oracle Corporation</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showSection('home')">Home</a></li>
+            <li>
+                <a href="#">About Us</a>
+                <ul>
+                    <li><a href="#" onclick="showSection('company_overview')">Company Overview</a></li>
+                    <li><a href="#" onclick="showSection('news_events')">News & Events</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Products & Solutions</a>
+                <ul>
+                    <li><a href="#" onclick="showSection('cloud_services')">Cloud Services</a></li>
+                    <li><a href="#" onclick="showSection('enterprise_software')">Enterprise Software</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Resources</a>
+                <ul>
+                    <li><a href="#" onclick="showSection('product_documentation')">Product Documentation</a></li>
+                    <li><a href="#" onclick="showSection('support_center')">Support Center</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Careers</a>
+                <ul>
+                    <li><a href="#" onclick="showSection('job_openings')">Job Openings</a></li>
+                    <li><a href="#" onclick="showSection('internships')">Internships</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Partners</a>
+                <ul>
+                    <li><a href="#" onclick="showSection('partner_programs')">Partner Programs</a></li>
+                </ul>
+            </li>
+            <li><a href="#" onclick="showSection('contact')">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <main id="content">
+        <!-- Home Section -->
+        <section id="home" class="active">
+            <h2>Welcome to Oracle Corporation</h2>
+            <p>Oracle Corporation is a global leader in software, cloud infrastructure, and database technologies. We empower businesses across the world to innovate, transform, and thrive in a digital-first era. Our mission is to help people and businesses leverage the power of data to unlock opportunities and create new possibilities.</p>
+            <p>Explore our vast portfolio of products and solutions designed to meet the needs of industries across the globe.</p>
+        </section>
+
+        <!-- Company Overview Section -->
+        <section id="company_overview">
+            <h2>Company Overview</h2>
+            <p>Oracle was founded in 1977 and has since evolved into one of the world’s largest software and hardware systems providers. Our offerings range from cloud applications and platform services to enterprise databases and business analytics. Headquartered in Austin, Texas, Oracle has a global footprint with offices in more than 175 countries.</p>
+            <p>Our values are rooted in innovation, integrity, and a commitment to excellence. We believe in making the world a better place by fostering connections, improving security, and advancing technology for everyone.</p>
+        </section>
+
+        <!-- News & Events Section -->
+        <section id="news_events">
+            <h2>News & Events</h2>
+            <p>Stay up-to-date with Oracle’s latest news, announcements, and events. Discover insights from our leadership, learn about recent product launches, and join us for upcoming conferences and webinars.</p>
+            <ul>
+                <li>Oracle OpenWorld 2024 – Join us for our annual conference in Las Vegas</li>
+                <li>Oracle’s Quarterly Financial Results – See the latest performance updates</li>
+                <li>New Cloud Regions – Announcing expansion into new global regions</li>
+            </ul>
+        </section>
+
+        <!-- Cloud Services Section -->
+        <section id="cloud_services">
+            <h2>Cloud Services</h2>
+            <p>Oracle Cloud Infrastructure (OCI) provides secure, reliable, and scalable cloud solutions for businesses of all sizes. Our offerings include Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS), designed to support high-performance applications, data security, and advanced analytics.</p>
+            <p>Explore OCI to harness the power of the cloud and drive digital transformation for your business.</p>
+        </section>
+
+        <!-- Enterprise Software Section -->
+        <section id="enterprise_software">
+            <h2>Enterprise Software</h2>
+            <p>Oracle’s suite of enterprise software solutions includes database management, enterprise resource planning (ERP), customer relationship management (CRM), and human capital management (HCM) software. Our solutions empower businesses to streamline processes, improve productivity, and achieve operational excellence.</p>
+            <p>Experience the future of business software with Oracle’s innovative and integrated platforms.</p>
+        </section>
+
+        <!-- Product Documentation Section -->
+        <section id="product_documentation">
+            <h2>Product Documentation</h2>
+            <p>Access Oracle’s comprehensive documentation library, where you’ll find guides, tutorials, and reference materials to support your journey with Oracle products. Whether you're a beginner or an advanced user, our resources will help you get the most out of your Oracle solutions.</p>
+        </section>
+
+        <!-- Support Center Section -->
+        <section id="support_center">
+            <h2>Support Center</h2>
+            <p>Oracle Support Center provides technical assistance, troubleshooting, and issue resolution for all Oracle products. Contact our support team for prompt help, or access our online knowledge base and forums for self-service options.</p>
+        </section>
+
+        <!-- Job Openings Section -->
+        <section id="job_openings">
+            <h2>Job Openings</h2>
+            <p>Join Oracle and be part of a company that’s transforming the world with cutting-edge technology. Explore career opportunities across engineering, sales, consulting, and more.</p>
+            <p>Visit our Careers page to view current openings and apply.</p>
+        </section>
+
+        <!-- Internships Section -->
+        <section id="internships">
+            <h2>Internships</h2>
+            <p>Oracle offers internship programs for students and recent graduates eager to gain hands-on experience in technology and business. Our internships provide valuable learning opportunities in a fast-paced and innovative environment.</p>
+        </section>
+
+        <!-- Partner Programs Section -->
+        <section id="partner_programs">
+            <h2>Partner Programs</h2>
+            <p>Oracle’s Partner Network (OPN) is designed to foster collaboration and growth for businesses offering Oracle solutions. Our partners gain access to resources, training, and support to expand their capabilities and drive success for their clients.</p>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions, comments, or inquiries, please feel free to reach out. Our team is here to assist you with all your Oracle needs.</p>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+            <p>Alternatively, you can reach us at our corporate headquarters:</p>
+            <address>
+                Oracle Corporation<br>
+                500 Oracle Parkway<br>
+                Redwood Shores, CA 94065<br>
+                Phone: (650) 506-7000<br>
+                Email: support@oracle.com
+            </address>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2024 Oracle Corporation. All rights reserved.
+    </footer>
+</body>
+</html>
